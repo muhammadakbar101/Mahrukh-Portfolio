@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="100%" height="100%">
+  <defs>
+    <linearGradient id="jimsBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f283d"/>
+      <stop offset="100%" stop-color="#143b59"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#jimsBg)"/>
+  <g font-family="system-ui, -apple-system, sans-serif" fill="#f8fafc">
+    <rect x="100" y="80" width="220" height="42" rx="21" fill="#38bdf8" fill-opacity="0.2"/>
+    <text x="210" y="106" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="1.5" fill="#38bdf8">AUSTRALIA MARKET</text>
+
+    <text x="100" y="210" font-size="52" font-weight="800" letter-spacing="-1.5">Jim’s Laundry Services</text>
+    <text x="100" y="260" font-size="24" font-weight="500" fill="#94a3b8">Social Media Management &amp; Performance Marketing</text>
+
+    <g transform="translate(100, 320)">
+      <rect width="280" height="180" rx="16" fill="#1e3a56" stroke="#38bdf8" stroke-width="2"/>
+      <text x="35" y="70" font-size="52" font-weight="900" fill="#38bdf8">10K+</text>
+      <text x="35" y="110" font-size="18" font-weight="700">Facebook Views</text>
+      <text x="35" y="140" font-size="15" fill="#94a3b8">In One Month</text>
+    </g>
+    <g transform="translate(420, 320)">
+      <rect width="320" height="180" rx="16" fill="#1e3a56" stroke="#10b981" stroke-width="2"/>
+      <text x="35" y="70" font-size="44" font-weight="900" fill="#10b981">GROWTH</text>
+      <text x="35" y="110" font-size="18" font-weight="700">Inbound Direct Messages</text>
+      <text x="35" y="140" font-size="15" fill="#94a3b8">Increased Customer Enquiries</text>
+    </g>
+    <g transform="translate(780, 320)">
+      <rect width="320" height="180" rx="16" fill="#1e3a56" stroke="#94a3b8" stroke-opacity="0.2" stroke-width="2"/>
+      <text x="35" y="70" font-size="44" font-weight="900" fill="#f8fafc">LOCAL REACH</text>
+      <text x="35" y="110" font-size="18" font-weight="700">Targeted Community</text>
+      <text x="35" y="140" font-size="15" fill="#94a3b8">Conversion-focused CTAs</text>
+    </g>
+  </g>
+</svg>

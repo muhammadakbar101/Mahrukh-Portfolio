@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18232c"/>
+      <stop offset="100%" stop-color="#243442"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg5)"/>
+  <!-- Graphic design geometry -->
+  <g transform="translate(180, 160)" stroke="#ede1c8" stroke-width="2" fill="none" opacity="0.8">
+    <circle cx="120" cy="120" r="90" stroke-opacity="0.3"/>
+    <rect x="180" y="30" width="180" height="180" rx="16" fill="#c85a32" fill-opacity="0.3" stroke="#c85a32"/>
+    <polygon points="120,40 280,220 40,220" stroke-opacity="0.5"/>
+  </g>
+  <g font-family="system-ui, -apple-system, sans-serif" fill="#ede1c8">
+    <rect x="70" y="70" width="180" height="40" rx="20" fill="#0284c7"/>
+    <text x="160" y="95" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="1">BRAND IDENTITY</text>
+    <text x="400" y="475" font-size="34" font-weight="800" text-anchor="middle">4+ YEARS EXPERIENCE</text>
+    <text x="400" y="515" font-size="17" font-weight="500" text-anchor="middle" fill="#ede1c8" opacity="0.8">Marketing Visuals · Social Graphics · Cohesive Identity</text>
+  </g>
+</svg>

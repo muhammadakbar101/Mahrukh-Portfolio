@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#191c14"/>
+      <stop offset="100%" stop-color="#242b1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg2)"/>
+  <!-- UI Calendar Grid Element -->
+  <g transform="translate(100, 160)" opacity="0.95">
+    <rect width="600" height="280" rx="16" fill="#2d351e" stroke="#ede1c8" stroke-opacity="0.15" stroke-width="2"/>
+    <rect x="30" y="30" width="120" height="60" rx="10" fill="#5a6330" opacity="0.85"/>
+    <rect x="170" y="30" width="120" height="60" rx="10" fill="#ede1c8" opacity="0.1"/>
+    <rect x="310" y="30" width="120" height="60" rx="10" fill="#ede1c8" opacity="0.1"/>
+    <rect x="450" y="30" width="120" height="60" rx="10" fill="#f4c2c9" opacity="0.9"/>
+    <rect x="30" y="110" width="120" height="60" rx="10" fill="#ede1c8" opacity="0.1"/>
+    <rect x="170" y="110" width="120" height="60" rx="10" fill="#5a6330" opacity="0.85"/>
+    <rect x="310" y="110" width="120" height="60" rx="10" fill="#ede1c8" opacity="0.1"/>
+    <rect x="450" y="110" width="120" height="60" rx="10" fill="#ede1c8" opacity="0.1"/>
+    <rect x="30" y="190" width="260" height="50" rx="8" fill="#ede1c8" opacity="0.08"/>
+    <rect x="310" y="190" width="260" height="50" rx="8" fill="#f4c2c9" opacity="0.3"/>
+  </g>
+  <g font-family="system-ui, -apple-system, sans-serif" fill="#ede1c8">
+    <rect x="70" y="70" width="180" height="40" rx="20" fill="#f4c2c9"/>
+    <text x="160" y="95" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="1" fill="#272b14">CONTENT CALENDARS</text>
+    <text x="400" y="490" font-size="28" font-weight="700" text-anchor="middle">Multiple Brands Managed</text>
+    <text x="400" y="525" font-size="15" font-weight="400" text-anchor="middle" fill="#b9bd97">Consistency · Publishing · Community Engagement</text>
+  </g>
+</svg>

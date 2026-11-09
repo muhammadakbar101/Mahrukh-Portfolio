@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="100%" height="100%">
+  <defs>
+    <linearGradient id="poshBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e2415"/>
+      <stop offset="60%" stop-color="#2a321d"/>
+      <stop offset="100%" stop-color="#181d11"/>
+    </linearGradient>
+    <radialGradient id="poshGlow" cx="70%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#f4c2c9" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#f4c2c9" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#poshBg)"/>
+  <rect width="1200" height="630" fill="url(#poshGlow)"/>
+  <g stroke="#b9bd97" stroke-opacity="0.1" stroke-width="1.5">
+    <line x1="100" y1="0" x2="100" y2="630"/>
+    <line x1="300" y1="0" x2="300" y2="630"/>
+    <line x1="700" y1="0" x2="700" y2="630"/>
+    <line x1="1100" y1="0" x2="1100" y2="630"/>
+    <line x1="0" y1="180" x2="1200" y2="180"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+  </g>
+  <g font-family="system-ui, -apple-system, sans-serif" fill="#ede1c8">
+    <rect x="100" y="80" width="310" height="42" rx="21" fill="#f4c2c9" fill-opacity="0.2" stroke="#f4c2c9" stroke-width="1.5"/>
+    <text x="255" y="106" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="1.5" fill="#f4c2c9">FEATURED CAMPAIGN</text>
+    
+    <text x="100" y="210" font-size="52" font-weight="800" letter-spacing="-1.5">Posh Education &amp; Migration</text>
+    <text x="100" y="260" font-size="24" font-weight="500" fill="#b9bd97">January 2027 UK Study Intake · Multi-Market Lead Generation</text>
+
+    <!-- Stat cards inside banner -->
+    <g transform="translate(100, 320)">
+      <rect width="220" height="180" rx="16" fill="#242b1a" stroke="#f4c2c9" stroke-width="2"/>
+      <text x="30" y="70" font-size="54" font-weight="900" fill="#f4c2c9">71</text>
+      <text x="30" y="110" font-size="18" font-weight="700">Leads Generated</text>
+      <text x="30" y="140" font-size="15" fill="#b9bd97">In 6 Days</text>
+    </g>
+    <g transform="translate(350, 320)">
+      <rect width="220" height="180" rx="16" fill="#242b1a" stroke="#5a6330" stroke-width="2"/>
+      <text x="30" y="70" font-size="44" font-weight="900" fill="#b5cc6a">PKR 66</text>
+      <text x="30" y="110" font-size="18" font-weight="700">Cost Per Lead</text>
+      <text x="30" y="140" font-size="15" fill="#b5cc6a">25% Below Benchmark</text>
+    </g>
+    <g transform="translate(600, 320)">
+      <rect width="220" height="180" rx="16" fill="#242b1a" stroke="#b9bd97" stroke-opacity="0.25" stroke-width="2"/>
+      <text x="30" y="70" font-size="48" font-weight="900" fill="#ede1c8">68.7K</text>
+      <text x="30" y="110" font-size="18" font-weight="700">Ad Views</text>
+      <text x="30" y="140" font-size="15" fill="#b9bd97">44,132 Viewers</text>
+    </g>
+    <g transform="translate(850, 320)">
+      <rect width="250" height="180" rx="16" fill="#242b1a" stroke="#b9bd97" stroke-opacity="0.25" stroke-width="2"/>
+      <text x="30" y="70" font-size="38" font-weight="900" fill="#ede1c8">PKR 4,711</text>
+      <text x="30" y="110" font-size="18" font-weight="700">Total Ad Spend</text>
+      <text x="30" y="140" font-size="15" fill="#b9bd97">Ultra-efficient Budget</text>
+    </g>
+  </g>
+</svg>

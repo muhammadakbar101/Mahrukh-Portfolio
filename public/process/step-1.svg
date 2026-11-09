@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 738 1600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="pbg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#191c15"/>
+      <stop offset="100%" stop-color="#28301c"/>
+    </linearGradient>
+  </defs>
+  <rect width="738" height="1600" fill="url(#pbg1)"/>
+  <!-- Status bar -->
+  <text x="60" y="70" font-family="system-ui" font-size="28" font-weight="600" fill="#ede1c8">9:41</text>
+  <g transform="translate(60, 160)" font-family="system-ui, -apple-system, sans-serif" fill="#ede1c8">
+    <rect width="140" height="48" rx="24" fill="#c85a32"/>
+    <text x="70" y="32" font-size="18" font-weight="700" text-anchor="middle">STEP 01</text>
+    <text x="0" y="120" font-size="52" font-weight="800" letter-spacing="-1">Research &amp;</text>
+    <text x="0" y="180" font-size="52" font-weight="800" letter-spacing="-1" fill="#c85a32">Discovery</text>
+    <text x="0" y="240" font-size="22" opacity="0.8">Audience &amp; Industry Landscape</text>
+
+    <!-- Card 1: Target Audience -->
+    <rect x="0" y="300" width="618" height="200" rx="20" fill="#ede1c8" fill-opacity="0.08" stroke="#ede1c8" stroke-opacity="0.15" stroke-width="2"/>
+    <text x="30" y="350" font-size="24" font-weight="700">1. Target Audience Audit</text>
+    <text x="30" y="390" font-size="18" opacity="0.7">Demographics, behaviors, pain points</text>
+    <text x="30" y="430" font-size="18" opacity="0.7">Multi-market focus: PK, AUS, LK</text>
+
+    <!-- Card 2: Competitor Analysis -->
+    <rect x="0" y="530" width="618" height="200" rx="20" fill="#ede1c8" fill-opacity="0.08" stroke="#ede1c8" stroke-opacity="0.15" stroke-width="2"/>
+    <text x="30" y="580" font-size="24" font-weight="700">2. Competitor Benchmarking</text>
+    <text x="30" y="620" font-size="18" opacity="0.7">Creative gaps, messaging tone</text>
+    <text x="30" y="660" font-size="18" opacity="0.7">Opportunity mapping for brand positioning</text>
+
+    <!-- Card 3: Brand Objectives -->
+    <rect x="0" y="760" width="618" height="200" rx="20" fill="#c85a32" fill-opacity="0.18" stroke="#c85a32" stroke-width="2"/>
+    <text x="30" y="810" font-size="24" font-weight="700" fill="#c85a32">3. Goal Definition</text>
+    <text x="30" y="850" font-size="18" opacity="0.9">Conversion vs. awareness targets</text>
+    <text x="30" y="890" font-size="18" opacity="0.9">Lead acquisition cost thresholds</text>
+  </g>
+</svg>

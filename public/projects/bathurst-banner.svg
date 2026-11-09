@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bagelBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2d1c0f"/>
+      <stop offset="100%" stop-color="#422915"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bagelBg)"/>
+  <g font-family="system-ui, -apple-system, sans-serif" fill="#f8fafc">
+    <rect x="100" y="80" width="240" height="42" rx="21" fill="#f59e0b" fill-opacity="0.2"/>
+    <text x="220" y="106" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="1.5" fill="#fbbf24">HOBART, AUSTRALIA</text>
+
+    <text x="100" y="210" font-size="52" font-weight="800" letter-spacing="-1.5">Bathurst Bagel</text>
+    <text x="100" y="260" font-size="24" font-weight="500" fill="#cbd5e1">Local Brand Marketing &amp; Social Strategy</text>
+
+    <g transform="translate(100, 320)">
+      <rect width="320" height="180" rx="16" fill="#382212" stroke="#fbbf24" stroke-width="2"/>
+      <text x="35" y="70" font-size="44" font-weight="900" fill="#fbbf24">LOCAL BUZZ</text>
+      <text x="35" y="110" font-size="18" font-weight="700">Hospitality Engagement</text>
+      <text x="35" y="140" font-size="15" fill="#fef3c7">Creator Visits &amp; Reviews</text>
+    </g>
+    <g transform="translate(460, 320)">
+      <rect width="320" height="180" rx="16" fill="#382212" stroke="#ea580c" stroke-width="2"/>
+      <text x="35" y="70" font-size="44" font-weight="900" fill="#fb923c">REELS</text>
+      <text x="35" y="110" font-size="18" font-weight="700">Platform-Native Video</text>
+      <text x="35" y="140" font-size="15" fill="#ffedd5">Behind-the-scenes bakery buzz</text>
+    </g>
+    <g transform="translate(820, 320)">
+      <rect width="280" height="180" rx="16" fill="#382212" stroke="#94a3b8" stroke-opacity="0.2" stroke-width="2"/>
+      <text x="35" y="70" font-size="44" font-weight="900" fill="#f8fafc">GROWTH</text>
+      <text x="35" y="110" font-size="18" font-weight="700">Follower Community</text>
+      <text x="35" y="140" font-size="15" fill="#cbd5e1">Sustained Brand Loyalty</text>
+    </g>
+  </g>
+</svg>

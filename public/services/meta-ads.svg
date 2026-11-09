@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141824"/>
+      <stop offset="100%" stop-color="#1c2438"/>
+    </linearGradient>
+    <linearGradient id="chartLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg3)"/>
+  <!-- Analytics curve -->
+  <g transform="translate(80, 160)">
+    <path d="M 0 240 Q 150 200, 280 140 T 520 60 T 640 20 L 640 260 L 0 260 Z" fill="#3b82f6" fill-opacity="0.12"/>
+    <path d="M 0 240 Q 150 200, 280 140 T 520 60 T 640 20" fill="none" stroke="url(#chartLine)" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="640" cy="20" r="9" fill="#10b981"/>
+    <circle cx="640" cy="20" r="18" fill="#10b981" fill-opacity="0.25"/>
+    <line x1="0" y1="260" x2="640" y2="260" stroke="#ede1c8" stroke-opacity="0.1" stroke-width="2"/>
+  </g>
+  <g font-family="system-ui, -apple-system, sans-serif" fill="#ede1c8">
+    <rect x="70" y="70" width="160" height="40" rx="20" fill="#3b82f6"/>
+    <text x="150" y="95" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="1">META ADS ROI</text>
+    <text x="400" y="470" font-size="44" font-weight="800" text-anchor="middle" letter-spacing="-1">71 LEADS IN 6 DAYS</text>
+    <text x="400" y="515" font-size="18" font-weight="600" text-anchor="middle" fill="#10b981">PKR 66.35 Cost Per Lead · 25% Below Benchmark</text>
+  </g>
+</svg>

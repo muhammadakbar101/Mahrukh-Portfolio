@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 738 1600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="pbg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22151d"/>
+      <stop offset="100%" stop-color="#351f2d"/>
+    </linearGradient>
+  </defs>
+  <rect width="738" height="1600" fill="url(#pbg3)"/>
+  <text x="60" y="70" font-family="system-ui" font-size="28" font-weight="600" fill="#ede1c8">9:41</text>
+  <g transform="translate(60, 160)" font-family="system-ui, -apple-system, sans-serif" fill="#ede1c8">
+    <rect width="140" height="48" rx="24" fill="#e1306c"/>
+    <text x="70" y="32" font-size="18" font-weight="700" text-anchor="middle">STEP 03</text>
+    <text x="0" y="120" font-size="52" font-weight="800" letter-spacing="-1">Creative</text>
+    <text x="0" y="180" font-size="52" font-weight="800" letter-spacing="-1" fill="#e1306c">Execution</text>
+    <text x="0" y="240" font-size="22" opacity="0.8">Production, Publishing &amp; Ads</text>
+
+    <!-- Visual Production -->
+    <rect x="0" y="300" width="618" height="230" rx="20" fill="#ede1c8" fill-opacity="0.08" stroke="#ede1c8" stroke-opacity="0.15" stroke-width="2"/>
+    <text x="30" y="350" font-size="24" font-weight="700">Native Asset Creation</text>
+    <text x="30" y="390" font-size="18" opacity="0.7">• Graphic Design (Photoshop &amp; Illustrator)</text>
+    <text x="30" y="430" font-size="18" opacity="0.7">• Short-Form Video &amp; Reels Editing</text>
+    <text x="30" y="470" font-size="18" opacity="0.7">• Engaging Captions &amp; High-Retention Hooks</text>
+
+    <!-- Meta Ads Deployment -->
+    <rect x="0" y="560" width="618" height="230" rx="20" fill="#e1306c" fill-opacity="0.18" stroke="#e1306c" stroke-width="2"/>
+    <text x="30" y="610" font-size="24" font-weight="700" fill="#e1306c">Active Campaign Management</text>
+    <text x="30" y="650" font-size="18" opacity="0.9">• Meta Ads Manager A/B Split Testing</text>
+    <text x="30" y="690" font-size="18" opacity="0.9">• Audience Target Optimization</text>
+    <text x="30" y="730" font-size="18" opacity="0.9">• Real-time Bid &amp; Budget Allocation</text>
+  </g>
+</svg>
