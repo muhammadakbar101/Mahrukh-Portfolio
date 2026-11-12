@@ -1,6 +1,15 @@
 import React, { useRef } from 'react';
 import { asset, CASES_BY_SLUG, CaseSlug } from '../data/portfolioData';
-import { ArrowLeftIcon, ArrowRightIcon, PlatformBadges, ZoomExpandIcon } from './Icons';
+import {
+  ArrowLeftIcon,
+  ArrowRightIcon,
+  FacebookBadge,
+  InstagramBadge,
+  LinkedInBadge,
+  PlatformBadges,
+  TikTokBadge,
+  ZoomExpandIcon,
+} from './Icons';
 
 interface CaseStudyViewProps {
   slug: Exclude<CaseSlug, 'dmwithmahrukhh'>;
@@ -58,6 +67,58 @@ export const CaseStudyView: React.FC<CaseStudyViewProps> = ({
             <span className="case__platform">
               <PlatformBadges platforms={data.platforms} size={20} />
             </span>
+            {data.socialLinks && (
+              <div className="case__social-links">
+                {data.socialLinks.instagram && (
+                  <a
+                    className="social-btn"
+                    href={data.socialLinks.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Visit ${data.client} on Instagram`}
+                  >
+                    <InstagramBadge size={16} />
+                    <span>Instagram ↗</span>
+                  </a>
+                )}
+                {data.socialLinks.facebook && (
+                  <a
+                    className="social-btn"
+                    href={data.socialLinks.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Visit ${data.client} on Facebook`}
+                  >
+                    <FacebookBadge size={16} />
+                    <span>Facebook ↗</span>
+                  </a>
+                )}
+                {data.socialLinks.tiktok && (
+                  <a
+                    className="social-btn"
+                    href={data.socialLinks.tiktok}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Visit ${data.client} on TikTok`}
+                  >
+                    <TikTokBadge size={16} />
+                    <span>TikTok ↗</span>
+                  </a>
+                )}
+                {data.socialLinks.linkedin && (
+                  <a
+                    className="social-btn"
+                    href={data.socialLinks.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Visit ${data.client} on LinkedIn`}
+                  >
+                    <LinkedInBadge size={16} />
+                    <span>LinkedIn ↗</span>
+                  </a>
+                )}
+              </div>
+            )}
           </div>
         </div>
       </header>

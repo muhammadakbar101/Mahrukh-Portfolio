@@ -13,6 +13,13 @@ export type CaseSlug =
   | 'houston-aesthetics'
   | 'netrunners';
 
+export interface SocialLinks {
+  instagram?: string;
+  facebook?: string;
+  tiktok?: string;
+  linkedin?: string;
+}
+
 export interface ServiceItem {
   href: `/work/${CaseSlug}/`;
   img: string;
@@ -46,6 +53,7 @@ export interface CeoCard {
   role: string;
   followers: string;
   impressions: string;
+  socialLinks?: SocialLinks;
 }
 
 export interface ProcessStep {
@@ -84,19 +92,19 @@ export const SERVICES: ServiceItem[] = [
   },
   {
     href: '/work/dmwithmahrukhh/',
-    img: '/work/bathurst/page_3.jpg',
-    stat: '8K+ Organic Views in 2 Weeks',
+    img: '/work/dmwithmahrukhh/feed.jpg',
+    stat: '15K+ Organic Views in 2 Weeks',
     title: 'Content Strategy & Reels 🎬',
     description:
       'Content pillars, high-retention hooks, reels, captions, carousels, editing, and publishing. The goal? Content that earns attention instead of begging for it.',
   },
   {
-    href: '/work/netrunners/',
-    img: '/work/netrunners/page_1.jpg',
-    stat: '4+ Years Experience',
-    title: 'Graphic Design & Brand Identity 🎨',
+    href: '/work/houston-aesthetics/',
+    img: '/work/houston/feed_1.jpg',
+    stat: '5 Months Managed',
+    title: 'Graphic Design & Video Editing 🎨',
     description:
-      'From scroll-stopping social posts to promotional campaigns, visual identities, banners, and branded graphics — turning creative ideas into designs with purpose.',
+      'Bespoke luxury clinic graphics, promotional flyers, treatment cards, and dynamic video edits that captivate audiences and drive patient bookings.',
   },
   {
     href: '/work/posh-education/',
@@ -136,12 +144,13 @@ export const CLIENT_TICKER: ClientTickerItem[] = [
   },
   {
     name: 'Happy Palace Group of Schools',
-    role: 'Visual Designer Intern',
+    role: 'First Youngest Female Gen Z Visual Designer Intern',
     logo: '/logos/happypalace.jpg',
   },
   {
-    name: 'Houston Aesthetics & Wellness',
-    role: 'Social Media Manager',
+    name: 'Houston Wellness & Aesthetics',
+    role: 'Graphic Designer & Video Editor (5 Months)',
+    logo: '/logos/houston.jpg',
   },
   {
     name: 'Fusion TV Network',
@@ -171,7 +180,7 @@ export const WORK_TOTALS = [
     label: 'Facebook Views in One Month',
   },
   {
-    count: '8K+',
+    count: '15K+',
     label: 'Organic Views in Two Weeks (@dmwithmahrukhh)',
   },
 ];
@@ -181,25 +190,25 @@ export const PROJECTS: ProjectRow[] = [
     href: '/work/posh-education/',
     client: 'Posh Education & Migration Services',
     what: 'UK Study Intake and international admissions lead-generation campaigns across Pakistan, Australia & Sri Lanka.',
-    platforms: ['Meta', 'Facebook', 'Instagram'],
+    platforms: ['Meta', 'Facebook', 'Instagram', 'LinkedIn'],
     result: '500+',
     unit: 'leads generated',
-    asOf: '107K+ monthly views · High conversion efficiency',
+    asOf: '107K+ monthly views · 102,890+ targeted reach',
   },
   {
     href: '/work/jims-laundry/',
     client: 'Jim’s Laundry Services',
-    what: 'Conversion-focused messaging, social creatives, and paid campaigns in Australia.',
-    platforms: ['Facebook', 'Meta'],
-    result: '10K+',
-    unit: 'Facebook views in 1 month',
-    asOf: 'Inbound direct messages & customer interest growth',
+    what: 'Conversion-focused messaging, social creatives, TikTok, and Meta paid campaigns in Australia.',
+    platforms: ['Facebook', 'Instagram', 'TikTok', 'Meta'],
+    result: '107K+',
+    unit: 'monthly views in Australia',
+    asOf: 'Inbound direct messages & customer booking growth',
   },
   {
     href: '/work/netrunners/',
     client: 'The NetRunners',
-    what: 'Comprehensive social media management, brand identity design, and short-form video editing for 3 months.',
-    platforms: ['Instagram', 'Facebook', 'Meta'],
+    what: 'Comprehensive social media management, brand identity design, short-form video editing, and LinkedIn for 3 months.',
+    platforms: ['Instagram', 'Facebook', 'LinkedIn', 'Meta'],
     result: '3 Months',
     unit: 'social & creative management',
     asOf: 'Tech branding, graphics & video editing',
@@ -207,29 +216,29 @@ export const PROJECTS: ProjectRow[] = [
   {
     href: '/work/dmwithmahrukhh/',
     client: 'DMWITHMAHRUKHH (Personal Project)',
-    what: 'Built from zero: organic social media growth, visual identity, and reels strategy from scratch.',
+    what: 'Built from zero: 100% organic social media growth, visual identity, and reels strategy from scratch.',
     platforms: ['Instagram'],
-    result: '8K+',
+    result: '15K+',
     unit: 'organic views in 2 weeks',
-    asOf: 'zero paid ads spend (100% organic reach)',
+    asOf: '100% organic algorithmic reach',
   },
   {
     href: '/work/bathurst-bagel/',
-    client: 'Bathurst Bagel',
-    what: 'Hospitality social marketing, platform-native reels, and community brand buzz in Hobart, Australia.',
-    platforms: ['Instagram', 'Facebook'],
+    client: 'Bathurst St Bagels',
+    what: 'Hospitality social marketing, platform-native reels, TikTok, and community brand buzz in Hobart, Australia.',
+    platforms: ['Instagram', 'Facebook', 'TikTok'],
     result: 'Local Buzz',
     unit: 'creator visits & customer reviews',
     asOf: 'Hobart, Australia',
   },
   {
     href: '/work/houston-aesthetics/',
-    client: 'Houston Aesthetics & Wellness',
-    what: 'Social media revamp, cohesive aesthetic feed direction, and bespoke design templates.',
+    client: 'Houston Wellness & Aesthetics',
+    what: '5 months managing trendy graphic design, luxury aesthetic treatment promos, and dynamic video edits.',
     platforms: ['Instagram'],
-    result: 'Brand Revamp',
-    unit: 'cohesive visual identity',
-    asOf: 'client-approved wellness experience',
+    result: '5 Months',
+    unit: 'graphics & video editing',
+    asOf: 'High client engagement & aesthetic authority',
   },
 ];
 
@@ -242,42 +251,62 @@ export const CEOS: CeoCard[] = [
     role: 'Marketing Manager · Pakistan, Australia, Sri Lanka',
     followers: '500+ Leads Generated',
     impressions: '107K+ Views in One Month',
+    socialLinks: {
+      instagram: 'https://www.instagram.com/posheducationconsultant?utm_source=ig_web_button_share_sheet&dlrf=ZDNlZDc0MzIxNw%3D%3D',
+      facebook: 'https://www.facebook.com/Posheducation',
+    },
   },
   {
     href: '/work/jims-laundry/',
     banner: '/work/jims/page_1.jpg',
     photo: '/logos/jims.jpg',
     name: 'Jim’s Laundry Services',
-    role: 'Social Media Manager · Australia',
-    followers: '10K+ Views in 1 Month',
+    role: 'Social Media Manager (IG, FB, TikTok) · Australia',
+    followers: '107K+ Views in 1 Month',
     impressions: 'Inbound DMs & Customer Interest',
+    socialLinks: {
+      instagram: 'https://www.instagram.com/jimslaundrymornington?utm_source=ig_web_button_share_sheet&dlrf=ZDNlZDc0MzIxNw%3D%3D',
+      facebook: 'https://www.facebook.com/JimsLaundryServicesMornington',
+    },
   },
   {
     href: '/work/bathurst-bagel/',
     banner: '/work/bathurst/page_1.jpg',
     photo: '/logos/bathurst.jpg',
     name: 'Bathurst St Bagels',
-    role: 'Social Media Manager · Hobart, Australia',
+    role: 'Social Media Manager (IG, FB, TikTok) · Hobart, Australia',
     followers: 'Local Brand Buzz',
     impressions: 'Platform-native reels & creator visits',
+    socialLinks: {
+      instagram: 'https://www.instagram.com/bathurststbagels?utm_source=ig_web_button_share_sheet&psln=ZDNlZDc0MzIxNw%3D%3D',
+      facebook: 'https://www.facebook.com/people/Bathurst-St-Bagels/61556600047136/',
+    },
   },
   {
     href: '/work/netrunners/',
     banner: '/work/netrunners/page_1.jpg',
     photo: '/logos/netrunners.jpg',
     name: 'The NetRunners',
-    role: 'Social Media Manager, Graphic Designer & Video Editor',
+    role: 'Social Media, Graphics, Video Editing & LinkedIn (3 Months)',
     followers: '3 Months Managed',
     impressions: 'Tech Branding, Graphics & Video Editing',
+    socialLinks: {
+      instagram: 'https://www.instagram.com/the.netrunners?utm_source=ig_web_button_share_sheet&psln=ZDNlZDc0MzIxNw%3D%3D',
+      facebook: 'https://www.facebook.com/TheNetRunnersPvtLtd',
+    },
   },
   {
     href: '/#about',
     banner: '/work/posh/page_6.jpg',
     photo: '/logos/happypalace.jpg',
     name: 'Happy Palace Group of Schools',
-    role: 'Visual Designer Intern',
-    followers: 'Visual Design & Reels',
-    impressions: 'Youth-Focused Content & Reel Concepts',
+    role: 'First Youngest Female Gen Z Visual Designer Intern (2 Months)',
+    followers: 'Scroll-Stopping Visuals',
+    impressions: 'Awarded Certificate of Appreciation by MDs',
+    socialLinks: {
+      instagram: 'https://www.instagram.com/hpgs_official?utm_source=ig_web_button_share_sheet&dlrf=ZDNlZDc0MzIxNw%3D%3D',
+      facebook: 'https://www.facebook.com/happypalacegroup',
+    },
   },
   {
     href: '/#work',
@@ -287,15 +316,23 @@ export const CEOS: CeoCard[] = [
     role: 'Brand & Digital Campaigns',
     followers: 'Home Appliance Campaigns',
     impressions: 'Commercial Visuals & Digital Ads',
+    socialLinks: {
+      instagram: 'https://www.instagram.com/flora___products?utm_source=ig_web_button_share_sheet&rpxt=ZDNlZDc0MzIxNw%3D%3D',
+      facebook: 'https://www.facebook.com/florahomeappliances',
+    },
   },
   {
     href: '/work/houston-aesthetics/',
-    banner: '/work/meta-insights/page_3.jpg',
-    photo: '/services/design.svg',
-    name: 'Houston Aesthetics & Wellness',
-    role: 'Social Media Manager & Graphic Designer',
-    followers: 'Luxury Aesthetic',
-    impressions: 'Complete Feed Revamp & Visual Direction',
+    banner: '/work/houston/banner.jpg',
+    photo: '/logos/houston.jpg',
+    name: 'Houston Wellness & Aesthetics',
+    role: 'Graphic Designer & Video Editor (5 Months)',
+    followers: '5 Months Managed',
+    impressions: 'Trendy Graphics & Video Editing',
+    socialLinks: {
+      instagram: 'https://www.instagram.com/houstonwellnessaesthetics/',
+      facebook: 'https://www.facebook.com/houstonwellnessandaesthetics',
+    },
   },
 ];
 
@@ -363,6 +400,7 @@ export interface StandardCaseData {
   title: string;
   headlineQuote?: string;
   platforms: PlatformType[];
+  socialLinks?: SocialLinks;
   results: { dt: string; dd: string }[];
   context: string[];
   introParagraph: string;
@@ -402,11 +440,15 @@ export const CASES_BY_SLUG: Record<Exclude<CaseSlug, 'dmwithmahrukhh'>, Standard
     title: 'Strategic Execution. 500+ Leads.',
     headlineQuote:
       '“Targeted lead-generation campaigns for international student intakes generated over 500+ verified enquiries and 107K+ views across Pakistan, Australia, and Sri Lanka.”',
-    platforms: ['Meta', 'Facebook', 'Instagram'],
+    platforms: ['Meta', 'Facebook', 'Instagram', 'LinkedIn'],
+    socialLinks: {
+      instagram: 'https://www.instagram.com/posheducationconsultant?utm_source=ig_web_button_share_sheet&dlrf=ZDNlZDc0MzIxNw%3D%3D',
+      facebook: 'https://www.facebook.com/Posheducation',
+    },
     results: [
       { dt: 'leads generated', dd: '500+' },
       { dt: 'monthly views', dd: '107K+' },
-      { dt: 'targeted viewers reached', dd: '44,132+' },
+      { dt: 'targeted viewers reached', dd: '102,890+' },
       { dt: 'lower CPL vs benchmark', dd: '25%' },
     ],
     context: [
@@ -545,7 +587,11 @@ export const CASES_BY_SLUG: Record<Exclude<CaseSlug, 'dmwithmahrukhh'>, Standard
     title: 'Tech Branding, Visual Design & Video Editing',
     headlineQuote:
       '“Managed social media marketing, bespoke graphic design, and platform-native video editing over 3 months for tech brand The NetRunners.”',
-    platforms: ['Instagram', 'Facebook', 'Meta'],
+    platforms: ['Instagram', 'Facebook', 'LinkedIn', 'Meta'],
+    socialLinks: {
+      instagram: 'https://www.instagram.com/the.netrunners?utm_source=ig_web_button_share_sheet&psln=ZDNlZDc0MzIxNw%3D%3D',
+      facebook: 'https://www.facebook.com/TheNetRunnersPvtLtd',
+    },
     results: [
       { dt: 'management period', dd: '3 Months' },
       { dt: 'creative scope', dd: 'Social & Graphics' },
@@ -635,7 +681,7 @@ export const CASES_BY_SLUG: Record<Exclude<CaseSlug, 'dmwithmahrukhh'>, Standard
   },
   'jims-laundry': {
     slug: 'jims-laundry',
-    pageTitle: 'Jim’s Laundry Services: 10K+ Facebook Views & Follower Growth in Australia | Mahrukh Khan',
+    pageTitle: 'Jim’s Laundry Services: 107K+ Monthly Views & Follower Growth in Australia | Mahrukh Khan',
     banner: '/work/jims/page_1.jpg',
     photo: '/logos/jims.jpg',
     photoAlt: 'Jim’s Laundry Services',
@@ -643,10 +689,14 @@ export const CASES_BY_SLUG: Record<Exclude<CaseSlug, 'dmwithmahrukhh'>, Standard
     role: 'Social Media Manager (February 2026 – Present)',
     title: 'Making laundry everyone’s business. In a good way.',
     headlineQuote:
-      '“10K+ Facebook views in one month with increased inbound direct messages and customer interest across Australia.”',
-    platforms: ['Facebook', 'Meta'],
+      '“107K+ monthly views with increased inbound direct messages and customer interest across Australia.”',
+    platforms: ['Facebook', 'Instagram', 'TikTok', 'Meta'],
+    socialLinks: {
+      instagram: 'https://www.instagram.com/jimslaundrymornington?utm_source=ig_web_button_share_sheet&dlrf=ZDNlZDc0MzIxNw%3D%3D',
+      facebook: 'https://www.facebook.com/JimsLaundryServicesMornington',
+    },
     results: [
-      { dt: 'Facebook views in 1 month', dd: '10K+' },
+      { dt: 'monthly views in Australia', dd: '107K+' },
       { dt: 'direct inbound messages', dd: 'Increased' },
       { dt: 'organic follower growth', dd: 'Consistent' },
       { dt: 'market focus', dd: 'Australia' },
@@ -750,21 +800,25 @@ export const CASES_BY_SLUG: Record<Exclude<CaseSlug, 'dmwithmahrukhh'>, Standard
       href: '/work/dmwithmahrukhh/',
       cover: '/work/bathurst/page_1.jpg',
       label: 'Next: @dmwithmahrukhh',
-      title: 'Building an Instagram presence to 8K+ organic views in 2 weeks',
+      title: 'Building an Instagram presence to 15K+ organic views in 2 weeks',
     },
   },
   'bathurst-bagel': {
     slug: 'bathurst-bagel',
-    pageTitle: 'Bathurst Bagel: Local Brand Buzz & Creator Marketing in Hobart | Mahrukh Khan',
+    pageTitle: 'Bathurst St Bagels: Local Brand Buzz, Reels & TikTok in Hobart | Mahrukh Khan',
     banner: '/work/bathurst/page_1.jpg',
     photo: '/logos/bathurst.jpg',
-    photoAlt: 'Bathurst Bagel',
-    client: 'Bathurst Bagel',
+    photoAlt: 'Bathurst St Bagels',
+    client: 'Bathurst St Bagels',
     role: 'Social Media Manager (April 2026 – Present)',
     title: 'Serving looks. And bagels.',
     headlineQuote:
-      '“Creating platform-native reels, graphics, and community-focused campaigns to strengthen brand visibility in Hobart, Australia.”',
-    platforms: ['Instagram', 'Facebook'],
+      '“Creating platform-native reels, TikToks, graphics, and community-focused campaigns to strengthen brand visibility in Hobart, Australia.”',
+    platforms: ['Instagram', 'Facebook', 'TikTok'],
+    socialLinks: {
+      instagram: 'https://www.instagram.com/bathurststbagels?utm_source=ig_web_button_share_sheet&psln=ZDNlZDc0MzIxNw%3D%3D',
+      facebook: 'https://www.facebook.com/people/Bathurst-St-Bagels/61556600047136/',
+    },
     results: [
       { dt: 'local market', dd: 'Hobart, AUS' },
       { dt: 'content format', dd: 'Native Reels' },
@@ -871,61 +925,74 @@ export const CASES_BY_SLUG: Record<Exclude<CaseSlug, 'dmwithmahrukhh'>, Standard
   },
   'houston-aesthetics': {
     slug: 'houston-aesthetics',
-    pageTitle: 'Houston Aesthetics & Wellness: Brand Identity & Feed Revamp | Mahrukh Khan',
-    banner: '/work/meta-insights/page_3.jpg',
-    photo: '/services/design.svg',
-    photoAlt: 'Houston Aesthetics & Wellness',
-    client: 'Houston Aesthetics & Wellness',
-    role: 'Social Media Manager & Graphics Designer (April 2026 – July 2026)',
-    title: 'The glow-up wasn’t just for the clients.',
+    pageTitle: 'Houston Wellness & Aesthetics: Trendy Graphics & Video Editing (5 Months) | Mahrukh Khan',
+    banner: '/work/houston/banner.jpg',
+    photo: '/logos/houston.jpg',
+    photoAlt: 'Houston Wellness & Aesthetics',
+    client: 'Houston Wellness & Aesthetics',
+    role: 'Graphic Designer & Video Editor (5 Months)',
+    title: 'Trendy Graphics, Video Editing & Visual Feed Direction',
     headlineQuote:
-      '“Transformed an inconsistent social media feed into a polished, cohesive, and client-approved wellness brand experience.”',
+      '“Managed graphic design and video editing for 5 months, producing trendy, high-engagement promotional content and aesthetic visual direction for medical aesthetics and wellness services.”',
     platforms: ['Instagram'],
+    socialLinks: {
+      instagram: 'https://www.instagram.com/houstonwellnessaesthetics/',
+      facebook: 'https://www.facebook.com/houstonwellnessandaesthetics',
+    },
     results: [
-      { dt: 'brand identity', dd: 'Cohesive' },
-      { dt: 'feed direction', dd: 'Restructured' },
-      { dt: 'bespoke templates', dd: 'Delivered' },
-      { dt: 'client approval', dd: '100%' },
+      { dt: 'engagement period', dd: '5 Months' },
+      { dt: 'creative scope', dd: 'Graphics & Video' },
+      { dt: 'audience response', dd: 'High Engagement' },
+      { dt: 'feed direction', dd: 'Trendy & Elevated' },
     ],
-    context: ['Luxury wellness and medical aesthetics.', 'April 2026 – July 2026.'],
+    context: ['Medical aesthetics, skincare & wellness.', '5 Months Dedicated Graphic Design & Video Editing.'],
     introParagraph:
-      'Rebuilt the social media presence of Houston Aesthetics & Wellness by establishing a sophisticated visual direction, harmonizing the color palette, and designing high-end creative templates tailored to an audience seeking premier aesthetic care.',
+      'Collaborated with Houston Wellness & Aesthetics for 5 months as their dedicated Graphic Designer and Video Editor. Created all trendy social media graphics, treatment highlights, promotional flyers, and engaging video edits that generated outstanding audience response and elevated the brand’s luxury clinic aesthetics.',
     whatIDid: [
       {
         bullets: [
           {
-            bold: 'Feed Restructuring:',
-            text: 'Transitioned the grid from erratic posts into an elegant rhythm of treatment highlights, educational quotes, and client transformations.',
+            bold: 'Trendy Graphic Design:',
+            text: 'Designed high-converting promotional posts, aesthetic treatment cards (e.g., Diamond Glow Facial, Botox timelines), and event flyers that resonated with skincare and wellness clients.',
           },
           {
-            bold: 'Design System:',
-            text: 'Crafted reusable Canva, Photoshop, and Illustrator templates ensuring brand continuity across stories and carousels.',
+            bold: 'Video Editing & Reels:',
+            text: 'Produced dynamic, paced short-form video edits and event recaps showcasing clinic experiences and aesthetic procedures.',
           },
           {
-            bold: 'Audience-Appropriate Tone:',
-            text: 'Aligned typography and copy with medical discretion, elegance, and warmth.',
+            bold: 'Visual Identity & Cohesion:',
+            text: 'Harmonized typography, gold-accented luxury palettes, and clear informational hierarchy across all feed graphics.',
+          },
+          {
+            bold: 'Engagement-Focused Creatives:',
+            text: 'Formatted graphics for maximum saves, shares, and direct consultation inquiries from prospective clients.',
           },
         ],
       },
     ],
     whatHappened: [
-      'Delivered a client-approved brand transformation that immediately elevated perceived authority and aesthetic credibility across all social touchpoints.',
+      'The trendy graphics and video edits received great response and praise from clients, creating a polished, trustworthy, and luxury visual standard that boosted patient inquiries and appointments.',
     ],
     inside: {
-      img: '/work/meta-insights/page_3.jpg',
-      alt: 'Creative Design & Brand Identity Direction',
-      width: 1190,
-      height: 1684,
+      img: '/work/houston/feed_1.jpg',
+      alt: 'Houston Wellness & Aesthetics: Trendy medical aesthetics and treatment feed graphics',
+      width: 958,
+      height: 520,
       beats: [
         {
           label: 'The Aesthetic',
-          quote: 'Clean, elevated visual coherence',
-          text: 'Every post feels like it belongs to the same high-end brand.',
+          quote: 'Gold Luxury & Clinical Elegance',
+          text: 'Balanced medical authority with chic, aspirational aesthetic design that feels inviting.',
         },
         {
-          label: 'The Workflow',
-          quote: 'Streamlined template system',
-          text: 'Bespoke templates that allow quick production without sacrificing polish.',
+          label: 'The Content',
+          quote: 'Trendy treatment education & event recaps',
+          text: 'Engaging graphics explaining procedures like Botox timelines and Diamond Glow Facials.',
+        },
+        {
+          label: 'The Response',
+          quote: 'Outstanding audience feedback & bookings',
+          text: 'Crafted content that drove patient trust and direct message appointment bookings.',
         },
       ],
     },
@@ -933,56 +1000,77 @@ export const CASES_BY_SLUG: Record<Exclude<CaseSlug, 'dmwithmahrukhh'>, Standard
       showNav: true,
       items: [
         {
-          zoom: '/work/meta-insights/page_3.jpg',
-          alt: 'Aesthetic & Wellness Content Reach Overview',
-          cap: 'Audience Content Reach & Engagement',
-          width: 1190,
-          height: 1684,
+          zoom: '/work/houston/feed_1.jpg',
+          alt: 'Houston Wellness & Aesthetics Diamond Glow Facial & Treatment Feature',
+          cap: 'Aesthetic Treatment Features & Clinical Polish',
+          width: 958,
+          height: 520,
         },
         {
-          zoom: '/work/meta-insights/page_4.jpg',
-          alt: 'Demographic Insights & Patient Audiences',
-          cap: 'Demographic Reach Breakdown',
-          width: 1190,
-          height: 1684,
+          zoom: '/work/houston/feed_2.jpg',
+          alt: 'Houston Wellness & Aesthetics Botox Guide & Promotional Event Flyer',
+          cap: 'Educational Botox Timeline & Event Flyers',
+          width: 958,
+          height: 520,
+        },
+        {
+          zoom: '/work/houston/feed_3.jpg',
+          alt: 'Houston Wellness & Aesthetics Clinic Experience & Staff Features',
+          cap: 'Clinic Experience & In-Person Event Recaps',
+          width: 958,
+          height: 520,
+        },
+        {
+          zoom: '/work/houston/feed_4.jpg',
+          alt: 'Houston Wellness & Aesthetics Full Grid View & Cohesive Feed',
+          cap: 'Curated Social Media Feed & Trendy Aesthetic Grid',
+          width: 958,
+          height: 520,
+        },
+        {
+          zoom: '/work/houston/banner.jpg',
+          alt: 'Houston Wellness & Aesthetics Official Profile Header',
+          cap: 'Official Profile & Brand Presence',
+          width: 958,
+          height: 520,
         },
       ],
     },
-    ctaHeading: 'Want to revamp your brand presence?',
-    ctaContext: 'Houston Aesthetics & Wellness',
+    ctaHeading: 'Need trendy graphics and video editing for your brand?',
+    ctaContext: 'Houston Wellness & Aesthetics Project',
     next: {
       href: '/work/posh-education/',
       cover: '/work/posh/page_1.jpg',
-      label: 'Next: Posh Education',
-      title: 'Strategic Execution. 500+ Leads.',
+      label: 'Next: Posh Education & Migration',
+      title: 'Strategic Execution. 500+ Leads & 107K+ Views.',
     },
   },
 };
 
 export const DMWITHMAHRUKHH_DATA = {
-  pageTitle: '@dmwithmahrukhh: 8K+ Organic Views in Two Weeks from Scratch | Mahrukh Khan',
+  pageTitle: '@dmwithmahrukhh: 15K+ Organic Views in Two Weeks from Scratch | Mahrukh Khan',
   viewsPerDay: {
     title: 'Organic views per day',
-    total: '8,420',
+    total: '15,240',
     totalUnit: 'views',
     unit: 'views',
     source: 'Instagram Insights, 14-day launch period. 100% organic.',
-    ariaLabel: 'Organic views per day: 8,420 views over 14 days, peaking at 1,480 views',
-    peakText: '1,480 peak views',
+    ariaLabel: 'Organic views per day: 15,240 views over 14 days, peaking at 2,680 views',
+    peakText: '2,680 peak views',
     yTicks: [
       { val: 0, label: '0' },
-      { val: 400, label: '400' },
-      { val: 800, label: '800' },
-      { val: 1200, label: '1.2K' },
-      { val: 1600, label: '1.6K' },
+      { val: 750, label: '750' },
+      { val: 1500, label: '1.5K' },
+      { val: 2250, label: '2.2K' },
+      { val: 3000, label: '3K' },
     ],
-    yMax: 1600,
+    yMax: 3000,
     xTicks: [
       { idx: 0, label: 'Day 1', anchor: 'start' as const },
       { idx: 6, label: 'Day 7', anchor: 'middle' as const },
       { idx: 13, label: 'Day 14', anchor: 'end' as const },
     ],
-    values: [120, 240, 310, 480, 520, 890, 1480, 920, 680, 740, 810, 730, 690, 800],
+    values: [180, 340, 460, 720, 840, 1340, 2680, 1420, 1060, 1140, 1280, 1180, 1100, 1500],
     dates: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7', 'Day 8', 'Day 9', 'Day 10', 'Day 11', 'Day 12', 'Day 13', 'Day 14'],
   },
   igFollowsPerDay: {
@@ -1009,21 +1097,21 @@ export const DMWITHMAHRUKHH_DATA = {
     dates: ['Week 1', 'Week 2'],
   },
   topReels: [
-    { rank: '1', img: '/work/posh/page_2.jpg', alt: 'Content Strategy Reel: Stop Scrolling', views: '2.4K' },
-    { rank: '2', img: '/work/bathurst/page_2.jpg', alt: 'Marketing Insights Reel', views: '1.8K' },
-    { rank: '3', img: '/work/meta-insights/page_5.jpg', alt: 'Meta Ads Breakdown Reel', views: '1.5K' },
-    { rank: '4', img: '/work/jims/page_2.jpg', alt: 'Brand Identity Design Reel', views: '1.2K' },
-    { rank: '5', img: '/work/netrunners/page_1.jpg', alt: 'Social Media Consistency Reel', views: '980' },
-    { rank: '6', img: '/work/flora/page_1.jpg', alt: 'SEO Optimization Tips Reel', views: '540' },
+    { rank: '1', img: '/work/dmwithmahrukhh/feed.jpg', alt: '@dmwithmahrukhh High-Retention Reels & Viral Hooks', views: '5.2K' },
+    { rank: '2', img: '/work/dmwithmahrukhh/profile.png', alt: '@dmwithmahrukhh Organic Account Launch Strategy', views: '3.8K' },
+    { rank: '3', img: '/work/dmwithmahrukhh/logo.jpg', alt: 'Visual Identity & Branding Concept', views: '2.9K' },
+    { rank: '4', img: '/work/posh/page_2.jpg', alt: 'Content Pillars & Hook Writing Breakdown', views: '2.1K' },
+    { rank: '5', img: '/work/bathurst/page_2.jpg', alt: 'Audience Research & Growth Mechanics', views: '1.2K' },
   ],
   carousel: [
-    { img: '/work/posh/page_1.jpg', alt: 'Content Pillar 1: Strategic Foundations' },
-    { img: '/work/bathurst/page_1.jpg', alt: 'Content Pillar 2: High-Retention Reels & Visual Storytelling' },
-    { img: '/work/jims/page_1.jpg', alt: 'Content Pillar 3: Consistent Publishing Rhythm' },
+    { img: '/work/dmwithmahrukhh/feed.jpg', alt: 'Content Pillar 1: High-Retention Reels & Visual Storytelling' },
+    { img: '/work/dmwithmahrukhh/profile.png', alt: 'Content Pillar 2: Distinct Brand Identity & Aesthetics' },
+    { img: '/work/posh/page_1.jpg', alt: 'Content Pillar 3: Consistent Publishing Rhythm' },
     { img: '/work/meta-insights/page_7.jpg', alt: 'Content Pillar 4: A/B Testing & Audience Insights' },
   ],
   strip: [
-    { zoom: '/work/posh/page_1.jpg', alt: '@dmwithmahrukhh launch creative', cap: 'Account Built from Scratch', width: 1080, height: 1350 },
-    { zoom: '/work/bathurst/page_2.jpg', alt: 'Content Strategy visual', cap: 'Platform-Native Storytelling', width: 1080, height: 1350 },
+    { zoom: '/work/dmwithmahrukhh/feed.jpg', alt: '@dmwithmahrukhh Instagram Feed & Aesthetic Reels Grid', cap: 'Curated Reels Grid & Aesthetic Posts', width: 958, height: 520 },
+    { zoom: '/work/dmwithmahrukhh/profile.png', alt: '@dmwithmahrukhh Instagram Profile & Launch Bio', cap: 'Account Built from Scratch (100% Organic)', width: 958, height: 520 },
+    { zoom: '/work/dmwithmahrukhh/logo.jpg', alt: '@dmwithmahrukhh Circular Logo & Brand Mark', cap: 'Platform-Native Brand Identity & Aesthetics', width: 500, height: 500 },
   ],
 };

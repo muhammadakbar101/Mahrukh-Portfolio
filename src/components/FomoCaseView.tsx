@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { asset, DMWITHMAHRUKHH_DATA } from '../data/portfolioData';
-import { ArrowLeftIcon, ArrowRightIcon, PlatformBadges } from './Icons';
+import { ArrowLeftIcon, ArrowRightIcon, InstagramBadge, PlatformBadges } from './Icons';
 
 interface LineChartProps {
   spec: {
@@ -246,22 +246,41 @@ export const FomoCaseView: React.FC<FomoCaseViewProps> = ({ onNavigate, onZoom, 
   return (
     <article className="case">
       <header className="case__hero has-banner">
-        <img className="case__hero-bg" src={asset('/work/bathurst/page_1.jpg')} alt="" />
+        <img className="case__hero-bg" src={asset('/work/dmwithmahrukhh/profile.png')} alt="@dmwithmahrukhh Profile" />
         <div className="wrap case__hero-in">
           <a className="case__back underline-link" href="/#work" onClick={(e) => handleLinkClick(e, '/#work')}>
             All work
           </a>
           <div className="case__who">
+            <img
+              className="case__photo"
+              src={asset('/logos/dmwithmahrukhh.jpg')}
+              alt="@dmwithmahrukhh"
+              width={240}
+              height={240}
+            />
             <p className="case__client">
               <strong>@dmwithmahrukhh</strong>
               <span>Personal Instagram Project</span>
             </p>
           </div>
-          <h1 className="display">8K+ Organic Views in Two Weeks from Scratch</h1>
+          <h1 className="display">15K+ Organic Views in Two Weeks from Scratch</h1>
           <div className="case__links">
             <span className="case__platform">
               <PlatformBadges platforms={['Instagram']} size={20} />
             </span>
+            <div className="case__social-links">
+              <a
+                className="social-btn"
+                href="https://www.instagram.com/dmwithmahrukhh/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit @dmwithmahrukhh on Instagram"
+              >
+                <InstagramBadge size={16} />
+                <span>Visit Instagram ↗</span>
+              </a>
+            </div>
           </div>
         </div>
       </header>
@@ -270,15 +289,15 @@ export const FomoCaseView: React.FC<FomoCaseViewProps> = ({ onNavigate, onZoom, 
         <dl className="case__results">
           <div>
             <dt>organic views in 14 days</dt>
-            <dd data-count>8,420</dd>
+            <dd data-count>15,240</dd>
           </div>
           <div>
             <dt>views from non-followers</dt>
             <dd data-count>88.4%</dd>
           </div>
           <div>
-            <dt>advertising budget spent</dt>
-            <dd data-count>PKR 0</dd>
+            <dt>reach strategy</dt>
+            <dd data-count>100% Organic</dd>
           </div>
           <div>
             <dt>days from account launch</dt>
@@ -331,7 +350,7 @@ export const FomoCaseView: React.FC<FomoCaseViewProps> = ({ onNavigate, onZoom, 
                     <strong>11.6%</strong> followers
                   </li>
                 </ul>
-                <p className="chart__source">Instagram Insights: 8,420 total views, 100% organic traction.</p>
+                <p className="chart__source">Instagram Insights: 15,240 total views, 100% organic traction.</p>
               </StaticChartFigure>
             </div>
           </section>
@@ -356,21 +375,21 @@ export const FomoCaseView: React.FC<FomoCaseViewProps> = ({ onNavigate, onZoom, 
                     <span className="bars__track">
                       <span className="bars__fill" style={{ '--w': '100%' } as React.CSSProperties} />
                     </span>
-                    <span className="bars__value">6.8K</span>
+                    <span className="bars__value">12.4K</span>
                   </li>
                   <li>
                     <span className="bars__label">Carousels</span>
                     <span className="bars__track">
                       <span className="bars__fill" style={{ '--w': '22%' } as React.CSSProperties} />
                     </span>
-                    <span className="bars__value">1.1K</span>
+                    <span className="bars__value">2.1K</span>
                   </li>
                   <li>
                     <span className="bars__label">Single Posts</span>
                     <span className="bars__track">
                       <span className="bars__fill" style={{ '--w': '10%' } as React.CSSProperties} />
                     </span>
-                    <span className="bars__value">520</span>
+                    <span className="bars__value">740</span>
                   </li>
                 </ul>
                 <p className="chart__source">Instagram Analytics, 14-day launch period</p>

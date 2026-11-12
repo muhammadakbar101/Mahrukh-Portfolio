@@ -63,7 +63,20 @@ export const MetaBadge: React.FC<{ size?: number }> = ({ size = 16 }) => (
   </span>
 );
 
-export type PlatformType = 'LinkedIn' | 'Instagram' | 'Facebook' | 'Meta';
+export const TikTokBadge: React.FC<{ size?: number }> = ({ size = 16 }) => (
+  <span className="platform">
+    <svg width={size} height={size} viewBox="0 0 24 24" aria-hidden="true">
+      <rect width="24" height="24" rx="4" fill="#010101" />
+      <path
+        fill="#ffffff"
+        d="M16.6 5.82s.51.5 1.4 0c.9-.5 1.5-.7 1.5-.7v3.2s-1.1-.1-2.2-.6c-1.1-.5-1.7-1.1-1.7-1.1v7.6a4.5 4.5 0 1 1-4.5-4.5c.3 0 .7 0 1 .1v3.2a1.8 1.8 0 1 0 1.8 1.8V3h2.7c0 1.2.5 2.1 1.5 2.8z"
+      />
+    </svg>
+    <span>TikTok</span>
+  </span>
+);
+
+export type PlatformType = 'LinkedIn' | 'Instagram' | 'Facebook' | 'Meta' | 'TikTok';
 
 export const PlatformBadges: React.FC<{
   platforms: PlatformType[];
@@ -77,6 +90,8 @@ export const PlatformBadges: React.FC<{
         return <FacebookBadge key={p} size={size} />;
       case 'Meta':
         return <MetaBadge key={p} size={size} />;
+      case 'TikTok':
+        return <TikTokBadge key={p} size={size} />;
       case 'LinkedIn':
       default:
         return <LinkedInBadge key={p} size={size} />;

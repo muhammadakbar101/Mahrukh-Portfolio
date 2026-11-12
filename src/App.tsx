@@ -16,9 +16,11 @@ import {
   ArrowRightIcon,
   ArrowUpIcon,
   CloseIcon,
+  FacebookBadge,
   InstagramBadge,
   LinkedInBadge,
   PlatformBadges,
+  TikTokBadge,
 } from './components/Icons';
 import { TopoCanvas } from './components/TopoCanvas';
 import { useFaceAndBuddy } from './components/FaceSeekEngine';
@@ -368,8 +370,37 @@ export function App() {
                           </span>
                         </span>
                         <span className="ceo__go">
-                          See campaign details <ArrowRightIcon />
+                          <span>See campaign details</span>
+                          <ArrowRightIcon />
                         </span>
+                        {ceo.socialLinks && (
+                          <div className="ceo__socials" onClick={(e) => e.stopPropagation()}>
+                            {ceo.socialLinks.instagram && (
+                              <a
+                                href={ceo.socialLinks.instagram}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="ceo__social-btn"
+                                aria-label={`${ceo.name} Instagram`}
+                                onClick={(e) => e.stopPropagation()}
+                              >
+                                <InstagramBadge size={13} />
+                              </a>
+                            )}
+                            {ceo.socialLinks.facebook && (
+                              <a
+                                href={ceo.socialLinks.facebook}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="ceo__social-btn"
+                                aria-label={`${ceo.name} Facebook`}
+                                onClick={(e) => e.stopPropagation()}
+                              >
+                                <FacebookBadge size={13} />
+                              </a>
+                            )}
+                          </div>
+                        )}
                       </a>
                     </li>
                   ))}
@@ -420,7 +451,7 @@ export function App() {
                       <dt>views in 1 month</dt>
                     </div>
                     <div>
-                      <dd data-count>44K+</dd>
+                      <dd data-count>102K+</dd>
                       <dt>viewers reached</dt>
                     </div>
                   </dl>
@@ -547,6 +578,8 @@ export function App() {
                       <dd className="facts__platforms">
                         <LinkedInBadge size={18} />
                         <InstagramBadge size={18} />
+                        <FacebookBadge size={18} />
+                        <TikTokBadge size={18} />
                       </dd>
                     </div>
                   </dl>
@@ -557,7 +590,10 @@ export function App() {
                     </strong>
                     <div style={{ display: 'grid', gap: '0.9rem', fontSize: '1rem', color: '#e5f2e3' }}>
                       <div>
-                        <strong style={{ color: 'var(--pink)' }}>Happy Palace Group of Schools</strong> — <span style={{ color: '#ffffff' }}>Visual Designer Intern (July – August 2025)</span>
+                        <strong style={{ color: 'var(--pink)' }}>Happy Palace Group of Schools</strong> — <span style={{ color: '#ffffff' }}>First Youngest Female Gen Z, Social Media &amp; Visual Designing Intern (2-Month Internship)</span>
+                        <p style={{ margin: '0.35rem 0 0', fontSize: '0.95rem', color: '#e5f2e3', lineHeight: 1.5 }}>
+                          Delivered hooky, scroll-stopping mockups, mood boards, posts, and visuals. Awarded an official Certificate of Appreciation by Managing Directors Ather Khan and Faizan Khan.
+                        </p>
                       </div>
                       <div>
                         <strong style={{ color: 'var(--pink)' }}>Fusion TV Network</strong> — <span style={{ color: '#ffffff' }}>Social Media Manager (October 2025 – June 2026)</span>
