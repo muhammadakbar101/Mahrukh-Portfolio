@@ -174,14 +174,16 @@ export function App() {
                     textTransform: 'uppercase',
                     letterSpacing: '0.08em',
                     fontWeight: 700,
-                    marginBottom: '0.35rem',
+                    marginBottom: '0.3rem',
                     color: 'var(--olive)',
                   }}
                 >
                   HEY, I'M MAHRUKH. 👋
                 </span>
-                <strong>I make brands hard to scroll past.</strong>
-                <p style={{ margin: '0.4rem 0 0', fontSize: '0.98rem', lineHeight: 1.4 }}>
+                <strong style={{ fontSize: '1.25rem', lineHeight: 1.25, display: 'block' }}>
+                  I make brands hard to scroll past.
+                </strong>
+                <p style={{ margin: '0.4rem 0 0', fontSize: '0.96rem', lineHeight: 1.4 }}>
                   Digital Marketing Manager · Content Strategist · Social Media Manager. Part creative brain, part strategy nerd, and plot twist? I'm also a medical technology student. 🩺
                 </p>
                 <small style={{ display: 'block', marginTop: '0.35rem', color: 'var(--olive-deep)', fontSize: '0.85rem' }}>
@@ -383,8 +385,8 @@ export function App() {
                   onClick={(e) => handleNavClick(e, '/work/posh-education/')}
                 >
                   <img
-                    src={asset('/work/meta-insights/page_1.jpg')}
-                    alt="Posh Education lead generation performance spotlight: 71 leads generated in 6 days on PKR 4,711 ad spend"
+                    src={asset('/work/meta-insights/page_3.jpg')}
+                    alt="Posh Education lead generation performance spotlight: 500+ leads generated and 107K+ views in one month"
                     width={1190}
                     height={1684}
                     loading="lazy"
@@ -399,27 +401,27 @@ export function App() {
                     </p>
                   </div>
                   <h2 className="display" id="own-title">
-                    Small Budget. Strategic Execution. 71 Leads.
+                    Strategic Execution. 500+ Leads.
                   </h2>
-                  <p className="own__hook">“PKR 66.35 cost per lead across a 6-day campaign.”</p>
+                  <p className="own__hook">“107K+ ad views in one month across international markets.”</p>
                   <p>
-                    One campaign. Six days. A focused strategy. For the January 2027 UK study intake at Posh Education &amp; Migration Services, I worked on a lead-generation campaign designed around targeted messaging, creative decisions and efficient advertising. With PKR 4,711 in total spend, the campaign generated 71 leads at an average cost of PKR 66.35 per lead (25% lower cost per lead than comparable ads).
+                    For the UK study intake and international admissions at Posh Education &amp; Migration Services, I developed high-converting campaigns built on precise audience targeting, creative testing, and message refinement. The campaigns generated over 500+ verified leads and over 107K+ ad views in a single month.
                   </p>
                   <p style={{ fontSize: '0.95rem', color: 'var(--olive)', fontStyle: 'italic', margin: '0.5rem 0 1rem' }}>
                     Not magic. Just strategy, creative thinking and a whole lot of watching the numbers.
                   </p>
                   <dl className="own__stats">
                     <div>
-                      <dd data-count>71</dd>
+                      <dd data-count>500+</dd>
                       <dt>leads generated</dt>
                     </div>
                     <div>
-                      <dd data-count>4,711</dd>
-                      <dt>PKR total ad spend</dt>
+                      <dd data-count>107K+</dd>
+                      <dt>views in 1 month</dt>
                     </div>
                     <div>
-                      <dd data-count>68,796</dd>
-                      <dt>ad views</dt>
+                      <dd data-count>44K+</dd>
+                      <dt>viewers reached</dt>
                     </div>
                   </dl>
                   <a
@@ -490,27 +492,27 @@ export function App() {
                   style={{ objectFit: 'cover' }}
                 />
                 <div className="about__text">
-                  <h2 className="display" id="about-title">
+                  <h2 className="display" id="about-title" style={{ color: '#ffffff' }}>
                     So, who’s the girl behind all these tabs?
                   </h2>
-                  <p>
+                  <p style={{ color: '#e5f2e3' }}>
                     Hey again. I’m Mahrukh. Digital marketer. Creative strategist. Designer. And, in a slightly unexpected plot twist, a medical technology student. 🩺
                   </p>
-                  <p>
+                  <p style={{ color: '#e5f2e3' }}>
                     My creative journey started with graphic design and grew into social media management, content strategy, digital marketing and performance advertising. Somewhere along the way, I realized I didn't just enjoy making things look good. I wanted to understand why people notice certain content, what makes them engage and how creative ideas translate into business results.
                   </p>
-                  <p>
+                  <p style={{ color: '#e5f2e3' }}>
                     I've worked across education, hospitality, home services, aesthetics, wellness and entertainment, collaborating with brands in different markets and learning how to adapt ideas to very different audiences.
                   </p>
-                  <p>
+                  <p style={{ color: '#e5f2e3' }}>
                     I love bringing a concept to life from start to finish — planning it, scripting it, designing it, creating it and understanding its performance afterward. And when I'm not buried in marketing dashboards and editing timelines? There's a pretty good chance I'm studying anatomy or physiology. Basically, I love figuring out how things work. Whether it's the human body or an Instagram algorithm.
                   </p>
 
-                  <div style={{ marginTop: '2rem', padding: '1.25rem', background: 'var(--kraft)', borderRadius: '1rem', border: '1px solid var(--line)' }}>
-                    <strong style={{ fontSize: '1.1rem', color: 'var(--ink)', display: 'block', marginBottom: '0.6rem' }}>
+                  <div style={{ marginTop: '2rem', padding: '1.35rem', background: 'rgba(255, 255, 255, 0.08)', borderRadius: '1rem', border: '1px solid rgba(244, 182, 194, 0.3)' }}>
+                    <strong style={{ fontSize: '1.15rem', color: '#ffffff', display: 'block', marginBottom: '0.65rem' }}>
                       Currently Juggling:
                     </strong>
-                    <ul style={{ margin: 0, paddingLeft: '1.2rem', lineHeight: 1.7, color: 'var(--olive-deep)' }}>
+                    <ul style={{ margin: 0, paddingLeft: '1.2rem', lineHeight: 1.8, color: '#f0f8ef' }}>
                       <li>🩺 Medical sciences textbooks</li>
                       <li>🎨 Creative projects</li>
                       <li>🎬 Reels and editing timelines</li>
@@ -519,29 +521,29 @@ export function App() {
                     </ul>
                   </div>
 
-                  <dl className="facts">
+                  <dl className="facts" style={{ borderColor: 'rgba(255, 255, 255, 0.2)' }}>
                     <div>
-                      <dt>Based in</dt>
-                      <dd>Karachi, Pakistan</dd>
+                      <dt style={{ color: 'var(--pink)' }}>Based in</dt>
+                      <dd style={{ color: '#ffffff' }}>Karachi, Pakistan</dd>
                     </div>
                     <div>
-                      <dt>Experience</dt>
-                      <dd>4+ years in design, digital marketing &amp; social media</dd>
+                      <dt style={{ color: 'var(--pink)' }}>Experience</dt>
+                      <dd style={{ color: '#ffffff' }}>4+ years in design, digital marketing &amp; social media</dd>
                     </div>
                     <div>
-                      <dt>Currently</dt>
-                      <dd>Marketing Manager at Posh Education &amp; Migration Services</dd>
+                      <dt style={{ color: 'var(--pink)' }}>Currently</dt>
+                      <dd style={{ color: '#ffffff' }}>Marketing Manager at Posh Education &amp; Migration Services</dd>
                     </div>
                     <div>
-                      <dt>Markets</dt>
-                      <dd>Pakistan, Australia, Sri Lanka, Dubai, USA</dd>
+                      <dt style={{ color: 'var(--pink)' }}>Markets</dt>
+                      <dd style={{ color: '#ffffff' }}>Pakistan, Australia, Sri Lanka, Dubai, USA</dd>
                     </div>
                     <div>
-                      <dt>Specialties</dt>
-                      <dd>Meta Ads, Lead Gen, Content Strategy, Brand Design, SEO</dd>
+                      <dt style={{ color: 'var(--pink)' }}>Specialties</dt>
+                      <dd style={{ color: '#ffffff' }}>Meta Ads, Lead Gen, Content Strategy, Brand Design, SEO</dd>
                     </div>
                     <div>
-                      <dt>Platforms</dt>
+                      <dt style={{ color: 'var(--pink)' }}>Platforms</dt>
                       <dd className="facts__platforms">
                         <LinkedInBadge size={18} />
                         <InstagramBadge size={18} />
@@ -549,22 +551,22 @@ export function App() {
                     </div>
                   </dl>
 
-                  <div style={{ marginTop: '2.5rem', borderTop: '1px solid var(--line)', paddingTop: '1.5rem' }}>
-                    <strong style={{ fontSize: '1.1rem', color: 'var(--ink)', display: 'block', marginBottom: '0.8rem' }}>
+                  <div style={{ marginTop: '2.5rem', borderTop: '1px solid rgba(255, 255, 255, 0.2)', paddingTop: '1.5rem' }}>
+                    <strong style={{ fontSize: '1.15rem', color: '#ffffff', display: 'block', marginBottom: '1rem' }}>
                       Additional Experience
                     </strong>
-                    <div style={{ display: 'grid', gap: '0.8rem', fontSize: '0.95rem', color: 'var(--olive-deep)' }}>
+                    <div style={{ display: 'grid', gap: '0.9rem', fontSize: '1rem', color: '#e5f2e3' }}>
                       <div>
-                        <strong style={{ color: 'var(--ink)' }}>Happy Palace Group of Schools</strong> — Visual Designer Intern (July – August 2025)
+                        <strong style={{ color: 'var(--pink)' }}>Happy Palace Group of Schools</strong> — <span style={{ color: '#ffffff' }}>Visual Designer Intern (July – August 2025)</span>
                       </div>
                       <div>
-                        <strong style={{ color: 'var(--ink)' }}>Fusion TV Network</strong> — Social Media Manager (October 2025 – June 2026)
+                        <strong style={{ color: 'var(--pink)' }}>Fusion TV Network</strong> — <span style={{ color: '#ffffff' }}>Social Media Manager (October 2025 – June 2026)</span>
                       </div>
                       <div>
-                        <strong style={{ color: 'var(--ink)' }}>Jaroder Walla’s School</strong> — Social Media Marketing Manager (August 2024 – October 2025)
+                        <strong style={{ color: 'var(--pink)' }}>Jaroder Walla’s School</strong> — <span style={{ color: '#ffffff' }}>Social Media Marketing Manager (August 2024 – October 2025)</span>
                       </div>
                       <div>
-                        <strong style={{ color: 'var(--ink)' }}>Freelance Graphic Designer</strong> — (November 2022 – Present)
+                        <strong style={{ color: 'var(--pink)' }}>Freelance Graphic Designer</strong> — <span style={{ color: '#ffffff' }}>November 2022 – Present</span>
                       </div>
                     </div>
                   </div>

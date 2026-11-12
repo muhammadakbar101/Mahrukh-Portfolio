@@ -232,3 +232,130 @@ button.button:hover,
 .case__next:hover {
   box-shadow: 0 0 0 2px var(--pink) !important;
 }
+
+/* ==========================================================
+   HERO LAYOUT, BUTTON SEPARATION & READABILITY FIXES
+   ========================================================== */
+
+/* 1. Hero layout: Lower down paragraph & prevent merging with MAHRUKH */
+.hero {
+  height: 100vh !important;
+  height: 100dvh !important;
+  min-height: 100vh !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.hero__name {
+  inset: 7svh 0 auto !important;
+  font-size: clamp(4.5rem, 18vw, 18rem) !important;
+  line-height: 0.85 !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+  opacity: 0.9 !important;
+}
+
+.hero__intro {
+  left: var(--gutter) !important;
+  bottom: clamp(1.2rem, 3.5vh, 2.5rem) !important;
+  max-width: 29ch !important;
+  font-size: clamp(1rem, 1.35vw, 1.3rem) !important;
+  line-height: 1.38 !important;
+  z-index: 2 !important;
+  margin: 0 !important;
+}
+
+/* 2. Hero buttons: Clean, separated layout without overlapping */
+.hero__actions {
+  right: var(--gutter) !important;
+  left: auto !important;
+  bottom: clamp(1.2rem, 3.5vh, 2.5rem) !important;
+  flex-direction: column !important;
+  align-items: flex-end !important;
+  gap: 0.75rem !important;
+  display: flex !important;
+  z-index: 2 !important;
+}
+
+.hero__scroll {
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
+  bottom: clamp(1rem, 2.5vh, 1.8rem) !important;
+  position: absolute !important;
+  z-index: 2 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  font-size: 0.92rem !important;
+  font-weight: 600 !important;
+  white-space: nowrap !important;
+}
+
+/* 3. Services section & scrolling text banner positioning */
+.services.is-pinned .services__bg {
+  top: 72% !important;
+  font-size: clamp(6rem, 16vw, 15rem) !important;
+  -webkit-text-stroke: 1.5px rgba(108, 148, 100, 0.22) !important;
+}
+
+.services.is-pinned .services__pin {
+  padding-top: clamp(2rem, 5vh, 3.5rem) !important;
+}
+
+/* 4. About Section: High-contrast readability fix */
+.about {
+  background: var(--ink) !important;
+  color: #f8fcf7 !important;
+}
+
+.about__text p {
+  color: #e5f2e3 !important;
+  font-size: 1.15rem !important;
+  line-height: 1.65 !important;
+}
+
+.about .facts {
+  border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.about .facts dt {
+  color: var(--pink) !important;
+  font-weight: 700 !important;
+}
+
+.about .facts dd {
+  color: #ffffff !important;
+}
+
+.about strong {
+  color: #ffffff !important;
+}
+
+/* 5. Featured Client Campaigns: Responsive grid for 7 cards */
+.ceos__list {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)) !important;
+  gap: 1.75rem !important;
+}
+
+.ceo {
+  background: #192718 !important;
+  border: 1px solid rgba(244, 182, 194, 0.25) !important;
+  box-shadow: 0 16px 36px -20px rgba(0, 0, 0, 0.4) !important;
+}
+
+.ceo__name {
+  color: #ffffff !important;
+}
+
+.ceo__role {
+  color: var(--pink) !important;
+}
+
+.ceo__stats strong {
+  color: #ffffff !important;
+}
+
+.ceo__stats span {
+  color: #d8ebd6 !important;
+}
