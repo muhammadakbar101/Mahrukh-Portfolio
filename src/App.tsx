@@ -163,11 +163,43 @@ export function App() {
                   height={720}
                   role="img"
                   aria-label="Portrait of Mahrukh Khan, turning to look at your cursor"
+                  title="Yes, I'm following your cursor. No, it's not creepy. Probably."
                 />
               </div>
-              <p className="hero__intro">
-                Digital Marketing Manager in Karachi. <strong>I turn quiet social pages into brands people notice, follow, and message.</strong> Combining creative storytelling, strategic content, and performance-driven marketing across Pakistan, Australia, Dubai, USA, and Sri Lanka.
-              </p>
+              <div className="hero__intro">
+                <span
+                  style={{
+                    display: 'block',
+                    fontSize: '0.85rem',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.08em',
+                    fontWeight: 700,
+                    marginBottom: '0.35rem',
+                    color: 'var(--olive)',
+                  }}
+                >
+                  HEY, I'M MAHRUKH. 👋
+                </span>
+                <strong>I make brands hard to scroll past.</strong>
+                <p style={{ margin: '0.4rem 0 0', fontSize: '0.98rem', lineHeight: 1.4 }}>
+                  Digital Marketing Manager · Content Strategist · Social Media Manager. Part creative brain, part strategy nerd, and plot twist? I'm also a medical technology student. 🩺
+                </p>
+                <small style={{ display: 'block', marginTop: '0.35rem', color: 'var(--olive-deep)', fontSize: '0.85rem' }}>
+                  Based in Karachi, Pakistan. Creating for brands beyond borders.
+                </small>
+              </div>
+              <div className="hero__actions">
+                <a className="button" href="#work" onClick={(e) => handleNavClick(e, '/#work')}>
+                  See the work 👀
+                </a>
+                <a
+                  className="button button--quiet"
+                  href="#contact"
+                  onClick={(e) => handleNavClick(e, '/#contact')}
+                >
+                  Let’s make something happen ↗
+                </a>
+              </div>
               <a className="hero__scroll" href="#services" onClick={(e) => handleNavClick(e, '/#services')}>
                 <span>Scroll to explore my work</span>
                 <ArrowDownIcon size={18} />
@@ -180,9 +212,14 @@ export function App() {
                   Strategy · Content · Meta Ads · Growth · Strategy · Content · Meta Ads · Growth
                 </p>
                 <div className="wrap services__head">
-                  <h2 className="display" id="services-title">
-                    What I do
-                  </h2>
+                  <div>
+                    <h2 className="display" id="services-title">
+                      One brain. Too many creative tabs open.
+                    </h2>
+                    <p style={{ color: 'var(--olive-deep)', margin: '0.4rem 0 0', fontSize: '1.05rem', maxWidth: '48ch' }}>
+                      From the first brainstorm to the final performance report, here's what I bring to the table.
+                    </p>
+                  </div>
                   <p className="services__hint" aria-hidden="true">
                     Keep scrolling <span>→</span>
                   </p>
@@ -224,14 +261,30 @@ export function App() {
                 <ul>
                   {CLIENT_TICKER.map((c) => (
                     <li key={c.name}>
-                      {c.name} <small>{c.role}</small>
+                      {c.logo && (
+                        <img
+                          src={asset(c.logo)}
+                          alt={c.name}
+                          className="client-logo"
+                          loading="lazy"
+                        />
+                      )}
+                      <span>{c.name}</span> <small>{c.role}</small>
                     </li>
                   ))}
                 </ul>
                 <ul aria-hidden="true">
                   {CLIENT_TICKER.map((c) => (
                     <li key={`${c.name}-dup`}>
-                      {c.name} <small>{c.role}</small>
+                      {c.logo && (
+                        <img
+                          src={asset(c.logo)}
+                          alt={c.name}
+                          className="client-logo"
+                          loading="lazy"
+                        />
+                      )}
+                      <span>{c.name}</span> <small>{c.role}</small>
                     </li>
                   ))}
                 </ul>
@@ -241,8 +294,11 @@ export function App() {
             <section className="work" id="work" aria-labelledby="work-title">
               <div className="wrap">
                 <h2 className="display" id="work-title">
-                  Selected work
+                  Proof I don’t just yap about marketing.
                 </h2>
+                <p style={{ color: 'var(--olive-deep)', margin: '0.5rem 0 1.5rem', fontSize: '1.2rem', maxWidth: '44ch' }}>
+                  The ideas, the execution, the creative experiments, and the results. Welcome to my camera roll, but make it professional.
+                </p>
                 <ul className="stats__list" aria-label="Key campaign achievements">
                   {WORK_TOTALS.map((st) => (
                     <li key={st.label}>
@@ -251,7 +307,7 @@ export function App() {
                     </li>
                   ))}
                 </ul>
-                <p className="stats__asof">Verified campaign results across multi-market education, local hospitality, and commercial brand accounts.</p>
+                <p className="stats__asof">Different projects. Different wins. All real receipts.</p>
                 <ul className="projects">
                   {PROJECTS.map((proj) => (
                     <li key={proj.client}>
@@ -327,10 +383,10 @@ export function App() {
                   onClick={(e) => handleNavClick(e, '/work/posh-education/')}
                 >
                   <img
-                    src={asset('/projects/posh-spotlight.svg')}
+                    src={asset('/work/meta-insights/page_1.jpg')}
                     alt="Posh Education lead generation performance spotlight: 71 leads generated in 6 days on PKR 4,711 ad spend"
-                    width={1088}
-                    height={1327}
+                    width={1190}
+                    height={1684}
                     loading="lazy"
                   />
                 </a>
@@ -339,7 +395,7 @@ export function App() {
                     <img src={asset('/mahrukh.png')} alt="Mahrukh Khan" width={192} height={192} style={{ objectFit: 'cover' }} />
                     <p>
                       <strong>Mahrukh Khan</strong>
-                      <span>Featured Campaign Spotlight</span>
+                      <span style={{ color: 'var(--pink-deep)', fontWeight: 700 }}>THE RECEIPTS ARE RECEIPTING. 📈</span>
                     </p>
                   </div>
                   <h2 className="display" id="own-title">
@@ -347,7 +403,10 @@ export function App() {
                   </h2>
                   <p className="own__hook">“PKR 66.35 cost per lead across a 6-day campaign.”</p>
                   <p>
-                    A lead-generation campaign for Posh Education &amp; Migration Services promoting the January 2027 UK study intake. Rather than relying on heavy ad spend, the emphasis was on audience precision, creative split-testing, and conversion copy.
+                    One campaign. Six days. A focused strategy. For the January 2027 UK study intake at Posh Education &amp; Migration Services, I worked on a lead-generation campaign designed around targeted messaging, creative decisions and efficient advertising. With PKR 4,711 in total spend, the campaign generated 71 leads at an average cost of PKR 66.35 per lead (25% lower cost per lead than comparable ads).
+                  </p>
+                  <p style={{ fontSize: '0.95rem', color: 'var(--olive)', fontStyle: 'italic', margin: '0.5rem 0 1rem' }}>
+                    Not magic. Just strategy, creative thinking and a whole lot of watching the numbers.
                   </p>
                   <dl className="own__stats">
                     <div>
@@ -378,8 +437,11 @@ export function App() {
               <div className="wrap process__grid">
                 <div className="process__steps">
                   <h2 className="display" id="process-title">
-                    How I Work
+                    There’s a method to the madness.
                   </h2>
+                  <p style={{ color: 'var(--olive-deep)', margin: '0.5rem 0 1rem', fontSize: '1.15rem' }}>
+                    And yes, there are approximately 37 tabs open somewhere.
+                  </p>
                   <ol>
                     {PROCESS_STEPS.map((st) => (
                       <li key={st.step} className="process__step" data-step={st.step}>
@@ -429,20 +491,34 @@ export function App() {
                 />
                 <div className="about__text">
                   <h2 className="display" id="about-title">
-                    Who’s behind the strategy
+                    So, who’s the girl behind all these tabs?
                   </h2>
                   <p>
-                    I’m Mahrukh Khan, a digital marketing manager, content strategist, and creative professional based in Karachi, Pakistan. My professional journey began with graphic design and gradually expanded into social media management, digital marketing, content strategy, and performance advertising.
+                    Hey again. I’m Mahrukh. Digital marketer. Creative strategist. Designer. And, in a slightly unexpected plot twist, a medical technology student. 🩺
                   </p>
                   <p>
-                    Over the years, I’ve worked with businesses across education, hospitality, home services, and wellness, helping them build stronger digital identities and connect with their audiences. My experience includes managing multi-market marketing activities across Pakistan, Australia, and Sri Lanka, as well as developing organic content strategies and paid lead-generation campaigns.
+                    My creative journey started with graphic design and grew into social media management, content strategy, digital marketing and performance advertising. Somewhere along the way, I realized I didn't just enjoy making things look good. I wanted to understand why people notice certain content, what makes them engage and how creative ideas translate into business results.
                   </p>
                   <p>
-                    I believe effective marketing is a combination of creativity, strategy, and understanding the numbers behind the results. Whether I’m designing a visual, developing a content strategy, or managing an advertising campaign, I focus on creating work that has a clear purpose and delivers measurable value.
+                    I've worked across education, hospitality, home services, aesthetics, wellness and entertainment, collaborating with brands in different markets and learning how to adapt ideas to very different audiences.
                   </p>
                   <p>
-                    I enjoy turning ideas into meaningful digital experiences and helping businesses transform their online presence into something people notice, trust, and engage with.
+                    I love bringing a concept to life from start to finish — planning it, scripting it, designing it, creating it and understanding its performance afterward. And when I'm not buried in marketing dashboards and editing timelines? There's a pretty good chance I'm studying anatomy or physiology. Basically, I love figuring out how things work. Whether it's the human body or an Instagram algorithm.
                   </p>
+
+                  <div style={{ marginTop: '2rem', padding: '1.25rem', background: 'var(--kraft)', borderRadius: '1rem', border: '1px solid var(--line)' }}>
+                    <strong style={{ fontSize: '1.1rem', color: 'var(--ink)', display: 'block', marginBottom: '0.6rem' }}>
+                      Currently Juggling:
+                    </strong>
+                    <ul style={{ margin: 0, paddingLeft: '1.2rem', lineHeight: 1.7, color: 'var(--olive-deep)' }}>
+                      <li>🩺 Medical sciences textbooks</li>
+                      <li>🎨 Creative projects</li>
+                      <li>🎬 Reels and editing timelines</li>
+                      <li>📊 Ad campaigns and analytics</li>
+                      <li>☕ An entirely reasonable amount of caffeine. Probably.</li>
+                    </ul>
+                  </div>
+
                   <dl className="facts">
                     <div>
                       <dt>Based in</dt>
@@ -472,6 +548,26 @@ export function App() {
                       </dd>
                     </div>
                   </dl>
+
+                  <div style={{ marginTop: '2.5rem', borderTop: '1px solid var(--line)', paddingTop: '1.5rem' }}>
+                    <strong style={{ fontSize: '1.1rem', color: 'var(--ink)', display: 'block', marginBottom: '0.8rem' }}>
+                      Additional Experience
+                    </strong>
+                    <div style={{ display: 'grid', gap: '0.8rem', fontSize: '0.95rem', color: 'var(--olive-deep)' }}>
+                      <div>
+                        <strong style={{ color: 'var(--ink)' }}>Happy Palace Group of Schools</strong> — Visual Designer Intern (July – August 2025)
+                      </div>
+                      <div>
+                        <strong style={{ color: 'var(--ink)' }}>Fusion TV Network</strong> — Social Media Manager (October 2025 – June 2026)
+                      </div>
+                      <div>
+                        <strong style={{ color: 'var(--ink)' }}>Jaroder Walla’s School</strong> — Social Media Marketing Manager (August 2024 – October 2025)
+                      </div>
+                      <div>
+                        <strong style={{ color: 'var(--ink)' }}>Freelance Graphic Designer</strong> — (November 2022 – Present)
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </section>
@@ -479,8 +575,11 @@ export function App() {
             <section className="contact" id="contact" aria-labelledby="contact-title">
               <div className="wrap">
                 <h2 className="display" id="contact-title">
-                  Let’s turn your digital presence into measurable growth
+                  Got a brand? I’ve got ideas.
                 </h2>
+                <p style={{ color: 'var(--olive-deep)', margin: '0.5rem 0 1.5rem', fontSize: '1.2rem', maxWidth: '52ch' }}>
+                  Whether you're hiring, launching something exciting, looking for a freelancer or just need someone who understands both the aesthetic and the analytics — I'd love to hear about it. Let’s make your brand someone’s favorite thing to scroll past.
+                </p>
                 <div className="contact__grid">
                   <ContactForm idPrefix="contact" context="home contact section" />
                   <div className="contact__side">
@@ -541,75 +640,82 @@ export function App() {
         <div className="wrap foot__row">
           <span>© 2026 Mahrukh Khan. All Rights Reserved.</span>
           <span className="foot__credit">
-            Digital Marketing Manager &amp; Content Strategist
+            Creating things worth stopping the scroll for.
           </span>
         </div>
       </footer>
 
       <a
         className="buddy"
-        href="/#contact"
-        aria-label="Get in touch with Mahrukh"
+        href="#contact"
         onClick={(e) => handleNavClick(e, '/#contact')}
+        aria-label="Ask Mahrukh Khan about marketing or design projects"
       >
-        <canvas width={192} height={192} aria-hidden="true" />
-        <span className="buddy__say">Say hello</span>
+        <canvas
+          width={192}
+          height={192}
+          role="img"
+          aria-label="Miniature animated portrait of Mahrukh Khan tracking your cursor"
+        />
+        <span className="buddy__say">Got a project? Say hello!</span>
       </a>
 
-      <dialog
-        ref={contactDialogRef}
-        className="cdialog"
-        aria-labelledby="cdialog-title"
-        onClick={(e) => {
-          if (e.target === contactDialogRef.current) contactDialogRef.current.close();
-        }}
+      <a
+        className="to-top"
+        href="#top"
+        onClick={(e) => handleNavClick(e, '/#top')}
+        aria-label="Back to top"
       >
+        <ArrowUpIcon size={18} />
+        <span>Top</span>
+      </a>
+
+      <dialog ref={contactDialogRef} className="cdialog" aria-labelledby="cdialog-title">
         <div className="cdialog__in">
           <button
-            className="cdialog__close"
             type="button"
-            aria-label="Close"
+            className="cdialog__close"
+            aria-label="Close contact dialog"
             onClick={() => contactDialogRef.current?.close()}
           >
-            <CloseIcon size={22} />
+            <CloseIcon size={20} />
           </button>
           <div className="cdialog__head">
-            <img src={asset('/mahrukh.png')} alt="Mahrukh Khan" width={192} height={192} style={{ objectFit: 'cover', borderRadius: '50%' }} />
+            <img src={asset('/mahrukh.png')} alt="Mahrukh Khan" width={192} height={192} style={{ objectFit: 'cover' }} />
             <div>
-              <h2 id="cdialog-title">Send me a message</h2>
-              <p>I’ll reply by email, usually within 24 hours.</p>
+              <h2 id="cdialog-title">Got a brand? I’ve got ideas.</h2>
+              <p>Let’s build campaigns and content that actually get results.</p>
             </div>
           </div>
-          <ContactForm idPrefix="dlg" context={contactContext} nameInputRef={contactNameRef} />
+          <ContactForm idPrefix="dialog" context={contactContext || 'popup dialog'} />
         </div>
       </dialog>
 
       <dialog
         ref={zoomDialogRef}
         className="zoom"
-        aria-label="Enlarged image"
+        aria-label="Enlarged image view"
         onClick={(e) => {
-          const img = zoomDialogRef.current?.querySelector('.zoom__img');
-          if (e.target !== img) zoomDialogRef.current?.close();
+          if (e.target === zoomDialogRef.current) {
+            zoomDialogRef.current?.close();
+          }
         }}
       >
-        <button
-          type="button"
-          className="zoom__close"
-          aria-label="Close"
-          onClick={() => zoomDialogRef.current?.close()}
-        >
-          <CloseIcon size={22} />
-        </button>
-        <img className="zoom__img" src={zoomState?.src || undefined} alt={zoomState?.alt || ''} />
+        {zoomState && (
+          <>
+            <button
+              type="button"
+              className="zoom__close"
+              aria-label="Close enlarged view"
+              onClick={() => zoomDialogRef.current?.close()}
+            >
+              <CloseIcon size={20} />
+            </button>
+            <img className="zoom__img" src={zoomState.src} alt={zoomState.alt} />
+          </>
+        )}
       </dialog>
-
-      <a className="to-top" href="#top" aria-label="Back to top">
-        <ArrowUpIcon size={22} />
-        <span>Top</span>
-      </a>
     </>
   );
 }
-
 export default App;

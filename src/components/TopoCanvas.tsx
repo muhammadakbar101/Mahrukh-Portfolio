@@ -153,7 +153,7 @@ export const TopoCanvas: React.FC = () => {
         for (let lv = Math.ceil(min); lv <= max; lv++) {
           if ((lv % MAJOR_EVERY === 0) === Boolean(pass)) drawLevel(lv);
         }
-        ctx.strokeStyle = pass ? 'rgba(90, 99, 48, 0.34)' : 'rgba(90, 99, 48, 0.17)';
+        ctx.strokeStyle = pass ? 'rgba(108, 148, 100, 0.32)' : 'rgba(108, 148, 100, 0.16)';
         ctx.lineWidth = pass ? 1.4 : 1;
         ctx.stroke();
       }

@@ -246,7 +246,7 @@ export const FomoCaseView: React.FC<FomoCaseViewProps> = ({ onNavigate, onZoom, 
   return (
     <article className="case">
       <header className="case__hero has-banner">
-        <img className="case__hero-bg" src={asset('/projects/dmwithmahrukhh-banner.svg')} alt="" />
+        <img className="case__hero-bg" src={asset('/work/bathurst/page_1.jpg')} alt="" />
         <div className="wrap case__hero-in">
           <a className="case__back underline-link" href="/#work" onClick={(e) => handleLinkClick(e, '/#work')}>
             All work

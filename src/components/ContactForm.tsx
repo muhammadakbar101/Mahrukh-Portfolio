@@ -26,7 +26,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ idPrefix, context, nam
         text:
           invalid.type === 'email'
             ? 'Add an email address I can reply to.'
-            : 'Fill in your name, email and a short message.',
+            : 'Fill in your name, email and a short message about your project.',
         kind: 'error',
       });
       invalid.focus();
@@ -81,7 +81,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ idPrefix, context, nam
       onSubmit={handleSubmit}
     >
       <div className="cform__row">
-        <label htmlFor={`${idPrefix}-name`}>Your name</label>
+        <label htmlFor={`${idPrefix}-name`}>Your Name</label>
         <input
           ref={nameInputRef}
           id={`${idPrefix}-name`}
@@ -92,7 +92,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ idPrefix, context, nam
         />
       </div>
       <div className="cform__row">
-        <label htmlFor={`${idPrefix}-email`}>Your email</label>
+        <label htmlFor={`${idPrefix}-email`}>Your Email</label>
         <input
           id={`${idPrefix}-email`}
           name="email"
@@ -103,32 +103,40 @@ export const ContactForm: React.FC<ContactFormProps> = ({ idPrefix, context, nam
         />
       </div>
       <fieldset className="cform__row cform__need">
-        <legend>What do you need?</legend>
+        <legend>What’s the big idea?</legend>
         <label>
-          <input type="radio" name="need" value="LinkedIn content for a founder or CEO" defaultChecked /> LinkedIn for a
-          founder or CEO
+          <input type="radio" name="need" value="Digital Marketing Strategy" defaultChecked /> Digital Marketing Strategy
         </label>
         <label>
-          <input type="radio" name="need" value="Instagram for a brand" /> Instagram for a brand
+          <input type="radio" name="need" value="Social Media Management" /> Social Media Management
+        </label>
+        <label>
+          <input type="radio" name="need" value="Meta Ads & Lead Generation" /> Meta Ads &amp; Lead Gen
+        </label>
+        <label>
+          <input type="radio" name="need" value="Content Strategy & Reels" /> Content Strategy &amp; Reels
+        </label>
+        <label>
+          <input type="radio" name="need" value="Graphic Design & Branding" /> Graphic Design &amp; Branding
         </label>
         <label>
           <input type="radio" name="need" value="Something else" /> Something else
         </label>
       </fieldset>
       <div className="cform__row cform__wide">
-        <label htmlFor={`${idPrefix}-message`}>Tell me a little about you or your brand</label>
+        <label htmlFor={`${idPrefix}-message`}>Tell me a little about your project</label>
         <textarea
           id={`${idPrefix}-message`}
           name="message"
           rows={4}
-          placeholder="I run a travel company and want to post on LinkedIn every week…"
+          placeholder="Tell me what you're working on, what you want to achieve, or the vibe you're looking for…"
           required
         />
       </div>
       <input className="cform__trap" name="_honey" tabIndex={-1} autoComplete="off" aria-hidden="true" />
       <div className="cform__foot cform__wide">
         <button className="button" type="submit" disabled={submitting}>
-          Send message
+          Send it my way ↗
         </button>
         <p className="cform__status" role="status" aria-live="polite" data-kind={status.kind || undefined}>
           {status.text}
@@ -137,3 +145,4 @@ export const ContactForm: React.FC<ContactFormProps> = ({ idPrefix, context, nam
     </form>
   );
 };
+export default ContactForm;
